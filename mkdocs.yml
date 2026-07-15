@@ -1,0 +1,53 @@
+site_name: Crypton Merchant API
+site_url: https://kotsin.github.io/
+repo_url: https://github.com/kotsin/kotsin.github.io
+edit_uri: edit/merchant-docs/docs/
+
+theme:
+  name: material
+  language: en
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.expand
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.code.annotate
+
+plugins:
+  - search
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - tables
+  - admonition
+  - toc:
+      permalink: true
+
+nav:
+  - Overview: index.md
+  - Authentication: authentication.md
+  - Deposit: deposits.md
+  - Withdrawal: withdrawals.md
+  - Webhooks: webhooks.md
+  - Balance & Rate: balance.md
+  - API Reference: api-reference.md
+  - Error Codes: error-codes.md
